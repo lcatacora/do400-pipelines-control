@@ -1,8 +1,10 @@
 pipeline {
-    
     agent {
-        ...output omitted...
+        node {
+            label 'nodejs'
+        }
     }
+
     parameters {
         booleanParam(name: "RUN_FRONTEND_TESTS", defaultValue: true)
     }
